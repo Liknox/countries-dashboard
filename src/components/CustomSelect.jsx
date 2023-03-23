@@ -27,6 +27,10 @@ export const CustomSelect = styled(Select).attrs({
 	font-family: var(--family);
 	border: none;
 
+   @media (max-width: 767px) {
+		width: 100%;
+	}
+
 	& > * {
 		box-shadow: var(--shadow);
 	}
