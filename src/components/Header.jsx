@@ -26,7 +26,7 @@ const Title = styled(Link).attrs({
 	text-decoration: none;
 	font-weight: var(--fw-bold);
 	@media (max-width: 500px) {
-		font-size: var(--fs-sm);
+		font-size: 18px;
 	}
 `
 
