@@ -1,6 +1,6 @@
 # TODO:
 
-[] Toggle dark/light theme
+[x] Toggle dark/light theme
 [] Countries API handle
 [] Filter countries by search
 [] Filter countries by region
