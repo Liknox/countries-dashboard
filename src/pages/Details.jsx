@@ -14,6 +14,7 @@ export const Details = () => {
 
 	useEffect(() => {
 		dispatch(loadCountryByName(name))
+		document.title = name
 		return () => {
 			dispatch(clearDetails())
 		}

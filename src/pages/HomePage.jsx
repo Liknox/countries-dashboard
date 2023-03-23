@@ -18,6 +18,7 @@ export const HomePage = () => {
 
 	useEffect(() => {
 		if (!qty) dispatch(loadCountries())
+      document.title = "Countries"
 	}, [qty, dispatch])
 
 	return (
