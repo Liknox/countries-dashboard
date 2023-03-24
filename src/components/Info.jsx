@@ -96,6 +96,10 @@ export const Info = props => {
 	const dispatch = useDispatch()
 	const neighbors = useSelector(selectNeighbors)
 
+	function numberWithCommas(x) {
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+	}
+
 	useEffect(() => {
 		if (borders.length) {
 			dispatch(loadNeighborsByBorder(borders))
@@ -114,7 +118,7 @@ export const Info = props => {
 							<b>Native Name:</b> {nativeName}
 						</ListItem>
 						<ListItem>
-							<b>Population</b> {population}
+							<b>Population</b> {numberWithCommas(population)}
 						</ListItem>
 						<ListItem>
 							<b>Region:</b> {region}
