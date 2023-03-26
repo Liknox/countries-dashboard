@@ -1,8 +1,5 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
 import styled from "styled-components"
-import { loadNeighborsByBorder } from "../store/details/details-actions"
-import { selectNeighbors } from "../store/details/details-selectors"
+import { useNeighbors } from "./useNeighbors"
 
 const Wrapper = styled.section`
 	margin-top: 3rem;
@@ -93,18 +90,7 @@ const Tag = styled.span`
 export const Info = props => {
 	const { name, nativeName, flag, capital, population, region, subregion, topLevelDomain, currencies = [], languages = [], borders = [], push } = props
 
-	const dispatch = useDispatch()
-	const neighbors = useSelector(selectNeighbors)
-
-	function numberWithCommas(x) {
-		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-	}
-
-	useEffect(() => {
-		if (borders.length) {
-			dispatch(loadNeighborsByBorder(borders))
-		}
-	}, [borders, dispatch])
+	const [neighbors, numberWithCommas] = useNeighbors(borders)
 
 	return (
 		<Wrapper>
