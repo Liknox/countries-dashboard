@@ -33,7 +33,7 @@ export const store = configureStore({
 					api,
 				},
 			},
-			// ! if we use thunk, serializableCheck: false
+			// ! if we use thunk and don't use persist, serializableCheck: false
 			serializableCheck: {
 				ignoreActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
 			},
