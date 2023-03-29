@@ -1,8 +1,1 @@
-# TODO:
-
-[x] Toggle dark/light theme
-[x] Countries API handle
-[x] Filter countries by search
-[x] Filter countries by region
-[x] Additional data handling about a particular country
-[x] Country's neighbors handle
+### The same project as in master branch, but made with Redux Toolkit
