@@ -1,9 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 import { Header } from "./components/Header"
 import { Main } from "./components/Main"
-import { HomePage } from "./pages/HomePage"
-import { Details } from "./pages/Details"
-import { NotFound } from "./pages/NotFound"
+import { routes } from "./router/index.jsx"
 
 function App() {
 	return (
@@ -11,9 +9,9 @@ function App() {
 			<Header />
 			<Main>
 				<Routes>
-					<Route exact path="/" element={<HomePage />} />
-					<Route path="/country/:name" element={<Details />} />
-					<Route path="*" element={<NotFound />} />
+					{routes.map(e => (
+						<Route exact={e.exact} path={e.path} element={e.component} key={e.path} />
+					))}
 				</Routes>
 			</Main>
 		</>
