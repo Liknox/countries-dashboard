@@ -7,6 +7,7 @@ import { List } from "../components/List"
 import { Card } from "../components/Card"
 import { Controls } from "../components/Controls"
 import { selectControls } from "../store/controls/controls-selectors"
+import { clearDetails } from "../store/details/details-actions"
 
 export const HomePage = () => {
 	const navigate = useNavigate()
@@ -18,7 +19,8 @@ export const HomePage = () => {
 
 	useEffect(() => {
 		if (!qty) dispatch(loadCountries())
-      document.title = "Countries"
+		document.title = "Countries"
+		dispatch(clearDetails())
 	}, [qty, dispatch])
 
 	return (
@@ -36,17 +38,17 @@ export const HomePage = () => {
 							info: [
 								{
 									title: "Population",
-									description: c.population.toLocaleString()
+									description: c.population.toLocaleString(),
 								},
 								{
 									title: "Region",
-									description: c.region
+									description: c.region,
 								},
 								{
 									title: "Capital",
-									description: c.capital
-								}
-							]
+									description: c.capital,
+								},
+							],
 						}
 
 						return <Card key={c.name} onClick={() => navigate(`/country/${c.name}`)} {...countryInfo} />
