@@ -1,8 +1,6 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
 import styled from "styled-components"
-import { loadNeighborsByBorder } from "../store/details/details-actions"
-import { selectNeighbors } from "../store/details/details-selectors"
+import { numberWithCommas } from "../helpers/numberWithCommas"
+import { useInfo } from "../hooks/useInfo"
 
 const Wrapper = styled.section`
 	margin-top: 3rem;
@@ -91,20 +89,22 @@ const Tag = styled.span`
 `
 
 export const Info = props => {
-	const { name, nativeName, flag, capital, population, region, subregion, topLevelDomain, currencies = [], languages = [], borders = [], push } = props
+	const {
+		name,
+		nativeName,
+		flag,
+		capital,
+		population,
+		region,
+		subregion,
+		topLevelDomain,
+		currencies = [],
+		languages = [],
+		borders = [],
+		push,
+	} = props
 
-	const dispatch = useDispatch()
-	const neighbors = useSelector(selectNeighbors)
-
-	function numberWithCommas(x) {
-		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-	}
-
-	useEffect(() => {
-		if (borders.length) {
-			dispatch(loadNeighborsByBorder(borders))
-		}
-	}, [borders, dispatch])
+	const neighbors = useInfo(borders)
 
 	return (
 		<Wrapper>
@@ -112,6 +112,7 @@ export const Info = props => {
 
 			<div>
 				<InfoTitle>{name}</InfoTitle>
+
 				<ListGroup>
 					<List>
 						<ListItem>
@@ -151,6 +152,7 @@ export const Info = props => {
 						</ListItem>
 					</List>
 				</ListGroup>
+
 				<Meta>
 					<b>Border Countries</b>
 					{!borders.length ? (
