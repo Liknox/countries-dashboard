@@ -4,14 +4,8 @@ import { CustomSelect } from "./CustomSelect"
 import { Search } from "./Search"
 import { selectRegion } from "../store/controls/controls-selectors"
 import { setRegion } from "../store/controls/controls-actions"
+import { optionsMap } from "../helpers/defaultData"
 
-const optionsMap = {
-	Africa: { value: "Africa", label: "Africa" },
-	America: { value: "America", label: "America" },
-	Asia: { value: "Asia", label: "Asia" },
-	Europe: { value: "Europe", label: "Europe" },
-	Oceania: { value: "Oceania", label: "Oceania" }
-}
 const options = Object.values(optionsMap)
 
 const Wrapper = styled.div`
@@ -37,7 +31,13 @@ export const Controls = () => {
 	return (
 		<Wrapper>
 			<Search />
-			<CustomSelect options={options} placeholder="Filter by Region" isClearable isSearchable={false} value={optionsMap[region] || ""} onChange={handleSelect} />
+			<CustomSelect
+				options={options}
+				placeholder="Filter by Region"
+				isSearchable={false}
+				value={optionsMap[region] || ""}
+				onChange={handleSelect}
+			/>
 		</Wrapper>
 	)
 }
