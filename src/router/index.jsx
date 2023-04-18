@@ -9,7 +9,7 @@ const routes = [
 	{ path: "*", element: <NotFound />, exact: false },
 ]
 
-export function Content () {
-   const element = useRoutes(routes)
-   return element
+export function Content() {
+	const element = useRoutes(routes)
+	return element
 }

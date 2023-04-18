@@ -9,7 +9,6 @@ export const useInfo = borders => {
 
 	useEffect(() => {
 		if (borders.length) {
-			console.log("borders")
 			dispatch(loadNeighborsByBorder(borders))
 		}
 	}, [borders, dispatch])
