@@ -8,10 +8,8 @@ export const useInfo = borders => {
 	const neighbors = useSelector(selectNeighbors)
 
 	useEffect(() => {
-		if (borders.length) {
-			dispatch(loadNeighborsByBorder(borders))
-		}
-	}, [borders, dispatch])
+		dispatch(loadNeighborsByBorder(borders))
+	}, [dispatch])
 
 	return neighbors
 }
