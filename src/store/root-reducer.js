@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
 	theme: themeReducer,
 	countries: countriesReducer,
 	controls: controlsReducer,
-	details: detailsReducer
+	details: detailsReducer,
 })
 
 export default rootReducer

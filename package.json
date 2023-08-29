@@ -1,31 +1,33 @@
 {
-  "name": "countries-api-project",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "axios": "^1.3.4",
-    "lodash.throttle": "^4.1.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0",
-    "react-redux": "^8.0.5",
-    "react-router-dom": "^6.9.0",
-    "react-select": "^5.7.2",
-    "redux": "^4.2.1",
-    "redux-persist": "^6.0.0",
-    "redux-thunk": "^2.4.2",
-    "styled-components": "^5.3.9"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "vite": "^4.2.0"
-  }
+	"name": "countries-api-project",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"start": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"format": "prettier --write \"src/**/*.@(js|ts|jsx|tsx|vue|css|scss|module.css|module.scss)\""
+	},
+	"dependencies": {
+		"axios": "^1.3.4",
+		"lodash.throttle": "^4.1.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-icons": "^4.8.0",
+		"react-redux": "^8.0.5",
+		"react-router-dom": "^6.9.0",
+		"react-select": "^5.7.2",
+		"redux": "^4.2.1",
+		"redux-persist": "^6.0.0",
+		"redux-thunk": "^2.4.2",
+		"styled-components": "^5.3.9"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.28",
+		"@types/react-dom": "^18.0.11",
+		"@vitejs/plugin-react": "^3.1.0",
+		"prettier": "^3.0.3",
+		"vite": "^4.2.0"
+	}
 }

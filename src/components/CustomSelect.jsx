@@ -13,22 +13,22 @@ export const CustomSelect = styled(Select).attrs({
 			border: "none",
 			boxShadow: "var(--shadow)",
 			height: "50px",
-         cursor: "pointer",
+			cursor: "pointer",
 		}),
 		option: (provided, state) => ({
 			...provided,
 			cursor: "pointer",
 			color: "var(--colors-text)",
-			backgroundColor: state.isSelected ? "var(--colors-bg)" : "var(--colors-ui-base)"
-		})
-	}
+			backgroundColor: state.isSelected ? "var(--colors-bg)" : "var(--colors-ui-base)",
+		}),
+	},
 })`
 	width: 200px;
 	border-radius: var(--radii);
 	font-family: var(--family);
 	border: none;
 
-   @media (max-width: 767px) {
+	@media (max-width: 767px) {
 		width: 100%;
 	}
 

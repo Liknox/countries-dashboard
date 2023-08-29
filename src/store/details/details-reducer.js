@@ -4,7 +4,7 @@ const initialState = {
 	currentCountry: null,
 	status: "idle",
 	error: null,
-	neighbors: []
+	neighbors: [],
 }
 
 const detailsReducer = (state = initialState, { type, payload }) => {

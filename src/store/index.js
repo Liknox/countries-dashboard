@@ -1,4 +1,4 @@
-import { createStore, compose, applyMiddleware } from "redux"
+import { legacy_createStore as createStore, compose, applyMiddleware } from "redux"
 import axios from "axios"
 import thunk from "redux-thunk"
 import { persistStore, persistReducer } from "redux-persist"

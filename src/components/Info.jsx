@@ -89,30 +89,15 @@ const Tag = styled.span`
 `
 
 export const Info = props => {
-	const {
-		name,
-		nativeName,
-		flag,
-		capital,
-		population,
-		region,
-		subregion,
-		topLevelDomain,
-		currencies = [],
-		languages = [],
-		borders = [],
-		push,
-	} = props
+	const { name, nativeName, flag, capital, population, region, subregion, topLevelDomain, currencies = [], languages = [], borders = [], push } = props
 
 	const neighbors = useInfo(borders)
 
 	return (
 		<Wrapper>
 			<InfoImage src={flag} alt={name} />
-
 			<div>
 				<InfoTitle>{name}</InfoTitle>
-
 				<ListGroup>
 					<List>
 						<ListItem>
@@ -152,11 +137,10 @@ export const Info = props => {
 						</ListItem>
 					</List>
 				</ListGroup>
-
 				<Meta>
 					<b>Border Countries</b>
 					{!borders.length ? (
-						<span>There is no border countries</span>
+						<span>There is no border countries!</span>
 					) : (
 						<TagGroup>
 							{neighbors.map(countryName => (

@@ -24,7 +24,6 @@ export const HomePage = () => {
 	return (
 		<>
 			<Controls />
-
 			{error && <h2 style={{ textAlign: "center" }}>Can't fetch data</h2>}
 			{status === "loading" && <h2 style={{ textAlign: "center" }}>Loading...</h2>}
 			{status === "received" && (
@@ -48,7 +47,6 @@ export const HomePage = () => {
 								},
 							],
 						}
-
 						return <Card key={c.name} onClick={() => navigate(`/country/${c.name}`)} {...countryInfo} />
 					})}
 				</List>
