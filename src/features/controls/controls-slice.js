@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
 	search: "",
-	region: ""
+	region: "",
 }
 
 const controlsSlice = createSlice({
@@ -15,8 +15,8 @@ const controlsSlice = createSlice({
 		setRegion: (state, action) => {
 			state.region = action.payload
 		},
-		clearControls: () => initialState
-	}
+		clearControls: () => initialState,
+	},
 })
 
 export const { setSearch, setRegion, clearControls } = controlsSlice.actions

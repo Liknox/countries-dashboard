@@ -6,7 +6,7 @@ import { useCountries } from "./useCountries"
 const CountryList = () => {
 	const navigate = useNavigate()
 
-   const [countries, { status, error }] = useCountries()
+	const [countries, { status, error }] = useCountries()
 	return (
 		<>
 			{error && <h2 style={{ textAlign: "center" }}>Can't fetch data</h2>}

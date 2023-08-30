@@ -13,7 +13,7 @@ const ModeSwitcher = styled.div`
 `
 
 const ThemeSwitcher = () => {
-   const [theme, toggleTheme] = useTheme()
+	const [theme, toggleTheme] = useTheme()
 	return (
 		<ModeSwitcher onClick={toggleTheme}>
 			{theme === "light" ? <IoMoonOutline size="14px" /> : <IoMoon size="14px" />} <span style={{ marginLeft: "0.75rem" }}>{theme === "light" ? "Dark" : "Light"} Mode</span>

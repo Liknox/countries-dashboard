@@ -8,6 +8,6 @@ export const useSearch = () => {
 	const handleSearch = e => {
 		dispatch(setSearch(e.target.value))
 	}
-   
+
 	return [search, handleSearch]
 }
